@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - CyberProtect</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="menu">
+        <div class="logo">cybersecurite</div>
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+        <nav id="main-nav">
+            <a href="acceuil.html">Accueil</a>
+            <a href="service.html">Service</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <section class="introcontact">
+        <h1>Contactez-Nous</h1>
+        <p>Une question ? Un projet ? Notre équipe d'experts est à votre
+            disposition pour vous accompagner.</p>
+    </section>
+
+    <div class="contact-wrapper">
+        <section class="contact">
+            <h2>Envoyez-nous un message</h2>
+            <div class="form-group">
+                <label>Nom complet :</label>
+                <input type="text" placeholder="Votre nom">
+            </div>
+            <div class="form-group">
+                <label>Email :</label>
+                <input type="email" placeholder="votre@email.com">
+            </div>
+            <div class="form-group">
+                <label>Téléphone :</label>
+                <input type="tel" placeholder="+33 6 00 00 00 00">
+            </div>
+            <div class="form-group">
+                <label>Entreprise :</label>
+                <input type="text" placeholder="Votre entreprise">
+            </div>
+            <div class="form-group">
+                <label>Sujet :</label>
+                <select name="sujet">
+                    <option>Audit de sécurité</option>
+                    <option>Protection DDoS</option>
+                    <option>Gestion des accès</option>
+                    <option>Surveillance réseau</option>
+                    <option>Formation</option>
+                    <option>Autre</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Message :</label>
+                <textarea placeholder="Décrivez votre besoin..."></textarea>
+            </div>
+            <button type="button" class="btn-submit">Envoyer le message</button>
+        </section>
+
+        <section class="infocontact">
+            <h2>Informations de contact</h2>
+            <div class="info-block">
+                <h3>Email</h3>
+                <p>contact@cybersecure.com</p>
+                <p>support@cybersecure.com</p>
+            </div>
+            <div class="info-block">
+                <h3>Téléphone</h3>
+                <p>+33 1 23 45 67 89</p>
+                <p>Lun-Ven : 9h–18h</p>
+            </div>
+            <div class="info-block">
+                <h3>Adresse</h3>
+                <p>123 Avenue des Champs-Élysées</p>
+                <p>75008 Paris, France</p>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const nav = document.getElementById('main-nav');
+        hamburger.addEventListener('click', () => {
+            nav.classList.toggle('open');
+            hamburger.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

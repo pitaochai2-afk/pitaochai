@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accueil - CyberProtect</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="menu">
+        <div class="logo">cybersecurite</div>
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+        <nav id="main-nav">
+            <a href="acceuil.html">Accueil</a>
+            <a href="service.html">Service</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <section class="intro">
+        <h1>Protégez Votre Entreprise<br>contre les cybermenaces</h1>
+        <p>CyberProtect offre des solutions de cybersécurité de pointe pour
+            protéger votre entreprise contre les menaces numériques.
+            Audit, surveillance, formation et réponse aux incidents.</p>
+    </section>
+
+    <section class="point">
+        <div class="point-box">
+            <div class="icone">#</div>
+            <h2>+500</h2>
+            <p>Entreprises protégées</p>
+        </div>
+        <div class="point-box">
+            <div class="icone">#</div>
+            <h2>99,9%</h2>
+            <p>Taux de détection</p>
+        </div>
+        <div class="point-box">
+            <div class="icone">#</div>
+            <h2>+15</h2>
+            <p>Certificats</p>
+        </div>
+        <div class="point-box">
+            <div class="icone">#</div>
+            <h2>24/7</h2>
+            <p>Support disponible</p>
+        </div>
+    </section>
+
+    <section class="choix-section">
+        <div class="choix">
+            <h2>Pourquoi choisir ABCHENECYBERSECURITY ?</h2>
+            <p>Des solutions de sécurité à la pointe du secteur,
+                reposant sur une technologie de pointe et un support expert.</p>
+        </div>
+    </section>
+
+    <section class="cards">
+        <div class="card">
+            <div class="icone2"></div>
+            <h2>Expertise Reconnue</h2>
+            <p>Plus de 10 ans d'expérience dans la cybersécurité
+                avec une équipe certifiée et formée aux dernières menaces.</p>
+        </div>
+        <div class="card">
+            <div class="icone2">#</div>
+            <h2>Surveillance 24/7</h2>
+            <p>Une équipe disponible en permanence pour répondre à vos urgences.</p>
+        </div>
+        <div class="card">
+            <div class="icone2">#</div>
+            <h2>Protection Avancée</h2>
+            <p>Utilisation des dernières innovations en matière de cybersécurité.</p>
+        </div>
+        <div class="card">
+            <div class="icone2">#</div>
+            <h2>Conformité Garantie</h2>
+            <p>Respect des normes et réglementations en vigueur (RGPD, ISO 27001).</p>
+        </div>
+    </section>
+
+    <section class="partie3">
+        <h2>Prêt à Sécuriser Votre Entreprise ?</h2>
+        <p>Contactez nos experts dès aujourd'hui pour une évaluation gratuite de votre posture de sécurité.</p>
+        <div class="cta-buttons">
+            <a class="btn-primary" href="contact.html">Demander un devis</a>
+            <a class="btn-secondary" href="service.html">Explorer les offres</a>
+        </div>
+    </section>
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const nav = document.getElementById('main-nav');
+        hamburger.addEventListener('click', () => {
+            nav.classList.toggle('open');
+            hamburger.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

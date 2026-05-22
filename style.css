@@ -1,0 +1,610 @@
+/* ============================================
+   BASE & RESET
+============================================ */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #000000;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+}
+
+/* ============================================
+   HEADER / NAV
+============================================ */
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 40px;
+    background-color: #1f1a1a;
+    border-bottom: 2px solid rgb(73, 240, 115);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+div.logo {
+    color: #00ff99;
+    font-size: 24px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    letter-spacing: 2px;
+    flex-shrink: 0;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+nav a {
+    color: gray;
+    text-decoration: none;
+    transition: color 0.3s;
+    padding: 8px 12px;
+    font-size: 15px;
+    white-space: nowrap;
+}
+
+nav a:hover {
+    color: aquamarine;
+}
+
+/* Hamburger button – hidden on desktop */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 28px;
+    height: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 1100;
+}
+
+.hamburger span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: #00ff99;
+    border-radius: 2px;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: translateY(8.5px) rotate(45deg);
+}
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+    transform: translateY(-8.5px) rotate(-45deg);
+}
+
+/* ============================================
+   INTRO SECTION
+============================================ */
+.intro {
+    padding: 60px 40px 30px;
+}
+
+.intro h1 {
+    color: #00ff99;
+    font-size: clamp(24px, 5vw, 42px);
+    line-height: 1.3;
+}
+
+.intro p {
+    font-size: clamp(15px, 2.5vw, 20px);
+    margin-top: 16px;
+    max-width: 700px;
+    line-height: 1.7;
+}
+
+/* ============================================
+   STATS / POINTS
+============================================ */
+.point {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: 60px 20px;
+    background: #0b0f19;
+    text-align: center;
+    gap: 30px;
+}
+
+.point-box {
+    width: 180px;
+}
+
+.point-box h2 {
+    font-size: 36px;
+    margin: 10px 0;
+    color: #00ff99;
+    text-shadow: 0 0 10px #00ff99;
+}
+
+.point-box p {
+    font-size: 16px;
+    color: #ffffff;
+}
+
+/* ============================================
+   CHOIX SECTION
+============================================ */
+.choix-section {
+    padding: 40px 20px 10px;
+}
+
+.choix h2 {
+    text-align: center;
+    font-size: clamp(20px, 4vw, 30px);
+}
+
+.choix p {
+    text-align: center;
+    margin-top: 12px;
+    font-size: clamp(14px, 2.5vw, 18px);
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+}
+
+/* ============================================
+   CARDS
+============================================ */
+.cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 30px 20px;
+}
+
+.card {
+    background-color: #1e293b;
+    padding: 20px;
+    width: 240px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(7, 240, 147, 0.4);
+    transition: background-color 0.3s;
+}
+
+.card:hover {
+    background-color: #00ff99;
+    color: #000;
+}
+
+/* ============================================
+   CTA / PARTIE 3
+============================================ */
+.partie3 {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.partie3 h2 {
+    font-size: clamp(22px, 4vw, 35px);
+}
+
+.partie3 p {
+    font-size: clamp(14px, 2.5vw, 20px);
+    margin-top: 12px;
+}
+
+.cta-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
+    margin-top: 24px;
+}
+
+.btn-primary {
+    text-decoration: none;
+    border: 2px solid rgb(20, 238, 67);
+    border-radius: 6px;
+    padding: 12px 24px;
+    color: #000;
+    background-color: #00ff99;
+    font-weight: bold;
+    font-size: 15px;
+    transition: opacity 0.2s;
+}
+
+.btn-primary:hover {
+    opacity: 0.85;
+}
+
+.btn-secondary {
+    text-decoration: none;
+    border: 2px solid #00ff99;
+    border-radius: 6px;
+    padding: 12px 24px;
+    color: #00ff99;
+    background-color: transparent;
+    font-weight: bold;
+    font-size: 15px;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.btn-secondary:hover {
+    background-color: #00ff99;
+    color: #000;
+}
+
+/* ============================================
+   SERVICES PAGE
+============================================ */
+.serve {
+    padding: 50px 20px 20px;
+    text-align: center;
+}
+
+.serve h1 {
+    font-size: clamp(22px, 4vw, 36px);
+    color: #00ff99;
+}
+
+.serve p {
+    font-size: clamp(14px, 2.5vw, 18px);
+    margin-top: 12px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+}
+
+.services {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 30px 40px;
+    gap: 24px;
+}
+
+.cardservice {
+    background-color: #1e293b;
+    padding: 24px;
+    border-radius: 10px;
+    border: 2px solid rgb(54, 54, 53);
+    box-shadow: 0 0 8px rgba(0, 255, 153, 0.15);
+    transition: box-shadow 0.3s;
+}
+
+.cardservice:hover {
+    box-shadow: 0 0 16px rgba(0, 255, 153, 0.4);
+}
+
+.cardservice img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.cardservice h2 {
+    color: #00ff99;
+    margin: 14px 0 8px;
+    font-size: 20px;
+}
+
+.cardservice p {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.cardservice ul,
+.cardservice ol {
+    padding-left: 20px;
+    font-size: 14px;
+    line-height: 1.8;
+    color: #cccccc;
+}
+
+/* ============================================
+   CONTACT PAGE
+============================================ */
+.introcontact {
+    padding: 50px 20px 20px;
+    text-align: center;
+}
+
+.introcontact h1 {
+    font-size: clamp(26px, 5vw, 40px);
+    color: #00ff99;
+}
+
+.introcontact p {
+    font-size: clamp(14px, 2.5vw, 18px);
+    margin-top: 12px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+}
+
+.contact-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 30px 40px;
+    align-items: flex-start;
+}
+
+.contact {
+    flex: 1 1 340px;
+    border: 2px solid rgb(63, 62, 62);
+    padding: 28px;
+    border-radius: 10px;
+    background-color: #0d0d0d;
+}
+
+.contact h2 {
+    color: #00ff99;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 16px;
+}
+
+.form-group label {
+    font-size: 14px;
+    color: #aaaaaa;
+    margin-bottom: 6px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #585454;
+    border-radius: 6px;
+    background-color: #111111;
+    color: white;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #00ff99;
+}
+
+.form-group textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.btn-submit {
+    width: 100%;
+    padding: 14px;
+    background-color: #00ff99;
+    color: #000;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: opacity 0.2s;
+    margin-top: 6px;
+}
+
+.btn-submit:hover {
+    opacity: 0.85;
+}
+
+.infocontact {
+    flex: 1 1 260px;
+    border: 2px solid rgb(44, 43, 43);
+    padding: 28px;
+    border-radius: 10px;
+    background-color: #0d0d0d;
+}
+
+.infocontact h2 {
+    color: #00ff99;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.info-block {
+    margin-bottom: 24px;
+}
+
+.info-block h3 {
+    color: #00ff99;
+    font-size: 16px;
+    margin-bottom: 6px;
+}
+
+.info-block p {
+    color: #cccccc;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+/* ============================================
+   MOBILE RESPONSIVE — max-width: 768px
+============================================ */
+@media (max-width: 768px) {
+
+    /* Header */
+    .menu {
+        padding: 14px 20px;
+        flex-wrap: nowrap;
+        position: sticky;
+        top: 0;
+    }
+
+    div.logo {
+        font-size: 18px;
+        letter-spacing: 1px;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    nav {
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 70vw;
+        max-width: 280px;
+        height: 100vh;
+        background-color: #1f1a1a;
+        border-left: 2px solid #00ff99;
+        padding: 80px 30px 30px;
+        gap: 0;
+        z-index: 1050;
+        box-shadow: -4px 0 20px rgba(0,0,0,0.5);
+    }
+
+    nav.open {
+        display: flex;
+    }
+
+    nav a {
+        padding: 16px 0;
+        font-size: 18px;
+        border-bottom: 1px solid #2a2a2a;
+        width: 100%;
+    }
+
+    /* Intro */
+    .intro {
+        padding: 40px 20px 20px;
+    }
+
+    .intro h1 {
+        font-size: 26px;
+        line-height: 1.3;
+    }
+
+    .intro p {
+        font-size: 15px;
+    }
+
+    /* Stats */
+    .point {
+        flex-direction: column;
+        padding: 40px 20px;
+        gap: 24px;
+    }
+
+    .point-box {
+        width: 100%;
+    }
+
+    .point-box h2 {
+        font-size: 36px;
+    }
+
+    /* Cards */
+    .cards {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 16px;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    /* CTA buttons */
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        width: 100%;
+        max-width: 320px;
+        text-align: center;
+    }
+
+    /* Services grid → 1 column */
+    .services {
+        grid-template-columns: 1fr;
+        padding: 20px 16px;
+    }
+
+    .cardservice {
+        width: 100%;
+    }
+
+    .cardservice img {
+        height: 180px;
+    }
+
+    /* Contact layout → stack vertically */
+    .contact-wrapper {
+        flex-direction: column;
+        padding: 20px 16px;
+    }
+
+    .contact,
+    .infocontact {
+        width: 100%;
+        flex: none;
+    }
+
+    /* Sections padding */
+    .serve,
+    .introcontact,
+    .choix-section,
+    .partie3 {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+}
+
+/* ============================================
+   SMALL PHONES — max-width: 400px
+============================================ */
+@media (max-width: 400px) {
+
+    div.logo {
+        font-size: 15px;
+    }
+
+    .intro h1 {
+        font-size: 22px;
+    }
+
+    .point-box h2 {
+        font-size: 30px;
+    }
+
+    .cardservice img {
+        height: 150px;
+    }
+
+    .btn-submit {
+        font-size: 14px;
+        padding: 12px;
+    }
+}

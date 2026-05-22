@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - CyberProtect</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="menu">
+        <div class="logo">cybersecurite</div>
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+        <nav id="main-nav">
+            <a href="acceuil.html">Accueil</a>
+            <a href="service.html">Service</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <section class="serve">
+        <h1>Nos Services et Offres de Cybersécurité</h1>
+        <p>Des solutions complètes pour protéger votre entreprise contre toutes les menaces numériques.
+            Expertise, technologie et support dédié.</p>
+    </section>
+
+    <section class="services">
+        <div class="cardservice">
+            <img src="img/audit de securite.jfif" alt="Audit de sécurité">
+            <h2>Audit de Sécurité</h2>
+            <p>Évaluation complète de votre infrastructure pour identifier
+                les vulnérabilités et recommander des solutions.</p>
+            <ul>
+                <li>Analyse de risque</li>
+                <li>Test de pénétration</li>
+                <li>Rapport détaillé</li>
+                <li>Support 24/7</li>
+            </ul>
+        </div>
+        <div class="cardservice">
+            <img src="img/DDoS.jfif" alt="Protection DDoS">
+            <h2>Protection DDoS</h2>
+            <p>Protection avancée contre les attaques par déni de service
+                distribué pour garantir la disponibilité de vos services.</p>
+            <ol>
+                <li>Détection en temps réel</li>
+                <li>Mitigation automatique</li>
+                <li>Surveillance 24/24</li>
+                <li>Rapport mensuel</li>
+            </ol>
+        </div>
+        <div class="cardservice">
+            <img src="img/gestion des acces.jfif" alt="Gestion des accès">
+            <h2>Gestion des Accès</h2>
+            <p>Contrôle et gestion centralisés des identités et
+                des accès pour sécuriser vos ressources.</p>
+            <ol>
+                <li>Multi-facteur d'authentification</li>
+                <li>Single sign-on</li>
+                <li>Gestion des rôles</li>
+                <li>Logs d'accès</li>
+            </ol>
+        </div>
+        <div class="cardservice">
+            <img src="img/surveillance du reseau.jpg" alt="Surveillance réseau">
+            <h2>Surveillance Réseau</h2>
+            <p>Monitoring continu de votre réseau pour détecter et prévenir les intrusions.</p>
+            <ol>
+                <li>Détection d'intrusion</li>
+                <li>Alertes en temps réel</li>
+                <li>Analyse de trafic</li>
+                <li>Rapports personnalisés</li>
+            </ol>
+        </div>
+        <div class="cardservice">
+            <img src="img/formation securite.jpg" alt="Formation sécurité">
+            <h2>Formation Sécurité</h2>
+            <p>Sensibilisation et formation de vos équipes aux meilleures pratiques de cybersécurité.</p>
+            <ol>
+                <li>Sessions en ligne</li>
+                <li>Certificats</li>
+                <li>Matériel de cours</li>
+                <li>Support continu</li>
+            </ol>
+        </div>
+        <div class="cardservice">
+            <img src="img/chiffrement avance.jpg" alt="Chiffrement avancé">
+            <h2>Chiffrement Avancé</h2>
+            <p>Solutions de chiffrement de bout en bout pour protéger vos données sensibles.</p>
+            <ol>
+                <li>Chiffrement AES-256</li>
+                <li>Gestion de clés</li>
+                <li>Conformité RGPD</li>
+                <li>Support technique</li>
+            </ol>
+        </div>
+    </section>
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const nav = document.getElementById('main-nav');
+        hamburger.addEventListener('click', () => {
+            nav.classList.toggle('open');
+            hamburger.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
